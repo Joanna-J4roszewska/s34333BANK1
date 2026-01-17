@@ -24,4 +24,6 @@ public class PrzelewStorage {
     }
 
 
+    public void createPrzelew(String s, String maria) {
+    }
 }

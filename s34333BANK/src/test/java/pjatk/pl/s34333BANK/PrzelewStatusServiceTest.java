@@ -6,6 +6,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import static net.bytebuddy.matcher.ElementMatchers.any;
+import static org.mockito.Mockito.verify;
+
 @ExtendWith(MockitoExtension.class)
 public class PrzelewStatusServiceTest {
     @Mock
@@ -15,7 +18,10 @@ public class PrzelewStatusServiceTest {
     private PrzelewStatusService przelewStatusService;
 
     @Test
-    void przelewStatusServiceTest() {
+    void przelewStorage() {
+        przelewStorage.createPrzelew("ID-001", "Maria");
 
+        verify(przelewStorage).createPrzelew("ID-001", "Maria");
     }
+
 }
